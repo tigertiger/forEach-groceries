@@ -7,7 +7,7 @@ $(document).ready(function(){
     let groceryItem = $("input#groceryItem").val();
     list.push(groceryItem);
     console.log(list);
-   $("#listProgress").append(list); 
+   $("#listProgress").text(list); 
   });
   
 
