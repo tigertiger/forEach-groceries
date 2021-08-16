@@ -1,33 +1,13 @@
 $(document).ready(function(){
-  let list = [];
-  console.log(list);
-  console.log("hello??");
+ let list = [];
   $("#addItem").click(function(event){
     event.preventDefault();
     let groceryItem = $("input#groceryItem").val();
     list.push(groceryItem);
-    console.log(list);
-   $("#listProgress").text(list); 
-  });
-  
+   const finalList = list.slice();
+   finalList.sort();
+   $("#finalList").text(finalList);
+    finalList.toUppercase();
+   });
 
 });
-
-
-
-
-
-// $(document).ready(function(){
-  //   $("#favoriteList").click(function(){
-  // const favIceCream = ["Chocolate", "Vanilla", "Peppermint", "Cotton candy"];
-  // console.log(favIceCream);
-
-  // let favFood = $("input#favFood").val();
-  // let favMusic = $("input#favMusic").val();
-  // let favHair = $("input#favHair").val();
-  // let favThings = [];
-  // let reverseFavs = [];
-  //   favThings.push(favFood);
-  //   favThings.push(favMusic);
-  //   favThings.push(favHair);
-  //   favThings.push("Chicken");
